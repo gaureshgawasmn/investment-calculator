@@ -1,0 +1,28 @@
+@if((annualDataProjections?.length ?? 0) == 0){
+<p class="center">Please enter the desired input and click on 'Calculate'</p>
+
+} @else {
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>InvestMent Value</th>
+      <th>Interest(Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for(annualData of annualDataProjections; track annualData.year){
+    <tr>
+      <td>{{ annualData.year }}</td>
+      <td>{{ annualData.annualInvestment | currency : "INR" }}</td>
+      <td>{{ annualData.interest | currency : "INR" }}</td>
+      <td>{{ annualData.totalInterest | currency : "INR" }}</td>
+      <td>{{ annualData.totalAmountInvested | currency : "INR" }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
