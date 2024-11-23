@@ -7,7 +7,7 @@ import { InvestMentService } from '../investment-results/investment.service';
   styleUrl: './user-input.component.scss',
 })
 export class UserInputComponent {
-  initialInvestment = 1000;
+  initialInvestment = 0;
   annualInvestment = 1000;
   expectedReturn = 10;
   duration = 5;
@@ -21,9 +21,5 @@ export class UserInputComponent {
       expectedReturn: this.expectedReturn,
       duration: this.duration,
     });
-    this.initialInvestment = 1000;
-    this.annualInvestment = 1000;
-    this.expectedReturn = 10;
-    this.duration = 5;
   }
 }
