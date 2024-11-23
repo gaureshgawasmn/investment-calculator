@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/investment-calculator/browser",
+    "site": "gg-investment-calculator",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
